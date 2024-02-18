@@ -103,7 +103,7 @@ const Hero = (props) => {
           </Fab> */}
         </div>
 
-        <Stack
+       {todo.length > 0 &&  <Stack
           spacing={1.5}
           color={"black"}
           marginTop={"20px"}
@@ -116,7 +116,7 @@ const Hero = (props) => {
           {todo.map((item, index) => (
             <Task key={index} id={index} task={item} onDelete={deleteTask} />
           ))}
-        </Stack>
+        </Stack>}
       </motion.div>
     </div>
   );
