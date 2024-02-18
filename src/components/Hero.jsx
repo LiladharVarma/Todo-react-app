@@ -114,7 +114,7 @@ const Hero = (props) => {
           paddingRight={"10px"}
         >
           {todo.map((item, index) => (
-            <Task key={item} id={index} task={item} onDelete={deleteTask} />
+            <Task key={index} id={index} task={item} onDelete={deleteTask} />
           ))}
         </Stack>
       </motion.div>
