@@ -51,8 +51,12 @@ const Hero = (props) => {
     });
   };
 
+  // useEffect(() => {
+  //   setTodo(JSON.parse(localStorage.getItem("todo")));
+  // }, []);
   useEffect(() => {
-    setTodo(JSON.parse(localStorage.getItem("todo")));
+    const storedTodo = JSON.parse(localStorage.getItem("todo"));
+    setTodo(storedTodo || []);
   }, []);
 
   // const onDragEnd = (result) => {
